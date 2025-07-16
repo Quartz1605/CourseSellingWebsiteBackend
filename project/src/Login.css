@@ -1,0 +1,94 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #5ee7df, #b490ca);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+  top: -100px;
+  right: -150px;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(230, 22, 22);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+}
+
+.card h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.card p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #c05353;
+}
+
+.roles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.role {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.role img {
+  width: 30px;
+  height: 30px;
+}
+
+.role.user {
+  background-color: #00c265;
+  color: white;
+}
+
+.role.admin {
+  background-color: #2675ec;
+  color: white;
+}
+
+.role:hover {
+  transform: scale(1.05);
+}
